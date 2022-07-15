@@ -6,7 +6,7 @@ import HeroesList from './HeroesList';
 import ls from '../services/ls';
 import FilterName from './FilterName';
 import Switch from './Switch';
-
+import RangeToChangeFontSize from "./RangeToChangeFontSize";
 
 function App() {
 //Variables de estado:
@@ -54,6 +54,7 @@ function resetError(){
     <div className='App'>
     <h1>Marvel</h1>
     <Switch/>
+    <RangeToChangeFontSize/>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>
     {errorEmptyFilterName}
   <HeroesList list = {list}/>
