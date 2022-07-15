@@ -15,6 +15,7 @@ function getHeroes() {
                 return {
                     id: heroe.id,
                     name: heroe.name,
+                    description: heroe.description,
                     image: heroe.thumbnail.path + '.' + heroe.thumbnail.extension
                 };
             });
