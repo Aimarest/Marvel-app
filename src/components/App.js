@@ -1,10 +1,13 @@
 
 import '../styles/App.scss';
-import { useState, useEffect } from "react";
+import React  , { useState, useEffect } from "react";
 import getHeroes from '../services/HeroesApi';
 import HeroesList from './HeroesList';
 import ls from '../services/ls';
 import FilterName from './FilterName';
+import Switch from './Switch';
+
+
 function App() {
 //Variables de estado:
 const [list, setList] = useState( ls.get("heroes", []));
@@ -50,6 +53,7 @@ function resetError(){
   return (
     <div className='App'>
     <h1>Marvel</h1>
+    <Switch/>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>
     {errorEmptyFilterName}
   <HeroesList list = {list}/>
