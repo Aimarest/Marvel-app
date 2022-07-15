@@ -8,7 +8,7 @@ import FilterName from './FilterName';
 function App() {
 //Variables de estado:
 const [list, setList] = useState( ls.get("heroes", []));
-const [filterName, setFilterName] = useState('');
+
 
 //UseEffect para realizar el fetch al cargar la página:
 
@@ -24,13 +24,20 @@ const [filterName, setFilterName] = useState('');
   }, []); 
 
 // Función que filtra por nombre:
+
 function filterByName(props){
+if(props.length !== 0){
+ 
+  const heroesList = ls.get("heroes");
+  const heroesFiltered = heroesList.filter(heroe => heroe.name.toLowerCase().includes(props.toLowerCase()));
+  setList(heroesFiltered)
+}
 
 }
   return (
     <div className='App'>
     <h1>Marvel</h1>
-    <FilterName filterName={filterName} filterByName={filterByName}/>
+    <FilterName  filterByName = {filterByName}/>
   <HeroesList list = {list}/>
   </div>
   )
