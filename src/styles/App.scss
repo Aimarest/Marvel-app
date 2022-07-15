@@ -7,6 +7,9 @@
 @use "@material/button/styles";
 @include textfield.core-styles;
 
+$light-color: rgb(25, 179, 206);
+$dark-mode: rgb(66, 4, 66);
+$darkSwitch: grey;
 
 .react-switch-checkbox {
     height: 0;
@@ -21,7 +24,7 @@
     cursor: pointer;
     width: 80px;
     height: 30px;
-    background: rgb(128, 128, 128);
+    background:$darkSwitch;
     border-radius: 100px;
     position: relative;
     transition: background-color .2s;
