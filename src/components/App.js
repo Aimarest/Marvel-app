@@ -1,9 +1,10 @@
 
-import '../styles/App.css';
+import '../styles/App.scss';
 import { useState, useEffect } from "react";
 import getHeroes from '../services/HeroesApi';
 import HeroesList from './HeroesList';
 import ls from '../services/ls';
+import FilterName from './FilterName';
 function App() {
 //Variables de estado:
 const [list, setList] = useState( ls.get("heroes", []));
@@ -23,6 +24,7 @@ const [list, setList] = useState( ls.get("heroes", []));
   return (
     <div className='App'>
     <h1>Marvel</h1>
+    <FilterName/>
   <HeroesList list = {list}/>
   </div>
   )
