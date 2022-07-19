@@ -7,9 +7,45 @@
 @use "@material/button/styles";
 @include textfield.core-styles;
 
+//VARIABLES: 
+
 $light-color: rgb(25, 179, 206);
 $dark-mode: rgb(66, 4, 66);
 $darkSwitch: grey;
+$fontSizeLarge:44px;
+$fontSizeShort:14px;
+$fontSizeMedium:20px;
+$fontColor:black;
+$inputSize:70px;
+$inputMargin:2rem;
+.title{
+  font-size: $fontSizeLarge;
+}
+.inputFontSize{
+  &__label{
+  font-size:$fontSizeShort;
+}
+&__range{
+  cursor:pointer;
+  width: $inputSize;
+  margin-left:$inputMargin;
+}
+}
+.heroe{
+&__title{
+  font-size: $fontSizeMedium;
+  color:$fontColor;
+}
+}
+.inputFontColor{
+  &__label{
+    font-size:$fontSizeShort ;
+  }
+  &__palette{
+    width:$inputSize;
+    margin-left:$inputMargin;
+  }
+}
 
 .react-switch-checkbox {
     height: 0;
