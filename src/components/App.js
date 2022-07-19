@@ -14,6 +14,8 @@ function App() {
 const [list, setList] = useState( ls.get("heroes", []));
 const [errorEmptyFilterName, setErrorEmptyFilterName] = useState('');
 const [errorNoHeroes, setErrorNoHeroes] = useState('');
+
+
 //UseEffect para realizar el fetch al cargar la página:
 
   useEffect(() => {
@@ -51,12 +53,20 @@ function resetError(){
   setErrorNoHeroes('');
   setList(ls.get('heroes'))
 }
+
+
+//Función que cambia el valor de los inputs:
+
+function handleChangeInput(ev) {
+ console.log(ev)
+}
+
   return (
     <div className='App'>
     <h1 className='title'>Marvel</h1>
     <Switch/>
     <RangeToChangeFontSize/>
-    <InputColor/>
+    <InputColor handleChangeInput={handleChangeInput}/>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>
     {errorEmptyFilterName}
   <HeroesList list = {list}/>

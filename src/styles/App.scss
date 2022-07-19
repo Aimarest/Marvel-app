@@ -12,18 +12,19 @@
 $light-color: rgb(25, 179, 206);
 $dark-mode: rgb(66, 4, 66);
 $darkSwitch: grey;
-$fontSizeLarge:44px;
-$fontSizeShort:14px;
-$fontSizeMedium:20px;
-$fontColor:black;
+$fontSize:20px;
+$color:rgb(28, 54, 204);
 $inputSize:70px;
 $inputMargin:2rem;
+
+
 .title{
-  font-size: $fontSizeLarge;
+  font-size:3*  $fontSize ;
+  color:$color;
 }
 .inputFontSize{
   &__label{
-  font-size:$fontSizeShort;
+  font-size:$fontSize;
 }
 &__range{
   cursor:pointer;
@@ -33,16 +34,17 @@ $inputMargin:2rem;
 }
 .heroe{
 &__title{
-  font-size: $fontSizeMedium;
-  color:$fontColor;
+  font-size: 2* ($fontSize);
+  color:$color;
 }
 }
 .inputFontColor{
   &__label{
-    font-size:$fontSizeShort ;
+    font-size:$fontSize ;
   }
   &__palette{
     width:$inputSize;
+    color:$color;
     margin-left:$inputMargin;
   }
 }
