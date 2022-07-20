@@ -1,53 +1,46 @@
-//Estilos importados del filtro por nombre:
 
-@use "@material/floating-label/mdc-floating-label";
-@use "@material/line-ripple/mdc-line-ripple";
-@use "@material/notched-outline/mdc-notched-outline";
-@use "@material/textfield";
-@use "@material/button/styles";
-@include textfield.core-styles;
 
-//VARIABLES: 
+:root{
+  
+--light-color: rgb(25, 179, 206);
+--dark-mode: rgb(66, 4, 66);
+--darkSwitch: grey;
+--fontSize:20px;
+--color:rgb(28, 54, 204);
+--inputSize:70px;
+--inputMargin:2rem;
+}
 
-$light-color: rgb(25, 179, 206);
-$dark-mode: rgb(66, 4, 66);
-$darkSwitch: grey;
-$fontSize:20px;
-$color:rgb(28, 54, 204);
-$inputSize:70px;
-$inputMargin:2rem;
 
 
 .title{
-  font-size:3*  $fontSize ;
-  color:$color;
+  font-size: var(--fontSize) ;
+  color:var(--color);
 }
-.inputFontSize{
-  &__label{
-  font-size:$fontSize;
+.inputFontSize__label{
+  
+  font-size:var(--fontSize);
 }
-&__range{
+.inputFontSize__range{
   cursor:pointer;
-  width: $inputSize;
-  margin-left:$inputMargin;
+  width: var(--inputSize);
+  margin-left:var(--inputMargin);
 }
+
+.heroe__title{
+  font-size: var(--fontSize);
+  color:var(--color);
 }
-.heroe{
-&__title{
-  font-size: 2* ($fontSize);
-  color:$color;
-}
-}
-.inputFontColor{
-  &__label{
-    font-size:$fontSize ;
+
+.inputFontColor__label{
+    font-size:var(--fontSize) ;
   }
-  &__palette{
-    width:$inputSize;
-    color:$color;
-    margin-left:$inputMargin;
+  .inputFontColor__palette{
+    width:var(--inputSize);
+    color:var(--color);
+    margin-left:var(--inputMargin);
   }
-}
+
 
 .react-switch-checkbox {
     height: 0;
@@ -62,7 +55,7 @@ $inputMargin:2rem;
     cursor: pointer;
     width: 40px;
     height: 15px;
-    background:$darkSwitch;
+    background:var(--darkSwitch);
     border-radius: 100px;
     position: relative;
     transition: background-color .2s;

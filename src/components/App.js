@@ -1,5 +1,5 @@
 
-import '../styles/App.scss';
+import '../styles/App.css';
 import React  , { useState, useEffect } from "react";
 import getHeroes from '../services/HeroesApi';
 import HeroesList from './HeroesList';
@@ -58,7 +58,15 @@ function resetError(){
 //Función que cambia el valor de los inputs:
 
 function handleChangeInput(ev) {
- console.log(ev)
+ debugger;
+ /*const property = ev.target.name;
+
+ const sizing = this.dataset.sizing || '';*/
+ const element = ev.target;
+ const property = ev.target.name;
+  const value = ev.target.value;
+element.style.getPropertyValue(`--${property}`)
+ document.documentElement.style.setProperty(`--${property}`, ` ${value}`);
 }
 
   return (
