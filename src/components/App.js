@@ -58,22 +58,20 @@ function resetError(){
 //Función que cambia el valor de los inputs:
 
 function handleChangeInput(ev) {
- debugger;
- /*const property = ev.target.name;
-
- const sizing = this.dataset.sizing || '';*/
+console.log (ev)
+ const px = ev.target.dataset.sizing || '';
  const element = ev.target;
  const property = ev.target.name;
   const value = ev.target.value;
 element.style.getPropertyValue(`--${property}`)
- document.documentElement.style.setProperty(`--${property}`, ` ${value}`);
+ document.documentElement.style.setProperty(`--${property}`, ` ${value}${px}`);
 }
 
   return (
     <div className='App'>
     <h1 className='title'>Marvel</h1>
     <Switch/>
-    <RangeToChangeFontSize/>
+    <RangeToChangeFontSize handleChangeInput={handleChangeInput}/>
     <InputColor handleChangeInput={handleChangeInput}/>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>
     {errorEmptyFilterName}
