@@ -60,11 +60,13 @@
 
 .switchComponent{
   display:flex;
+  align-items: center;
   
 }
+.fa-moon{
+  margin-left: 20px;
+}
 .react-switch-checkbox {
-    height: 0;
-    width: 0;
     visibility: hidden;
   }
   
@@ -79,6 +81,7 @@
     border-radius: 100px;
     position: relative;
     transition: background-color .2s;
+    margin:1px;
   }
   
   .react-switch-label .react-switch-button {
@@ -92,6 +95,7 @@
     transition: 0.2s;
     background: #fff;
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+ 
   }
   
   .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
