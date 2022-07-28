@@ -8,13 +8,12 @@ import FilterName from './FilterName';
 import Switch from './Switch';
 import RangeToChangeFontSize from "./RangeToChangeFontSize";
 import InputColor from './InputColor';
-
 function App() {
 //Variables de estado:
 const [list, setList] = useState( ls.get("heroes", []));
 const [errorEmptyFilterName, setErrorEmptyFilterName] = useState('');
 const [errorNoHeroes, setErrorNoHeroes] = useState('');
-
+const [theme, setTheme] = useState('light');
 
 //UseEffect para realizar el fetch al cargar la página:
 
@@ -27,6 +26,15 @@ const [errorNoHeroes, setErrorNoHeroes] = useState('');
 
     }
   }, []); 
+
+
+
+  //Función que cambia el tema de la app:
+
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  }
 
 // Función que filtra por nombre:
 
@@ -55,10 +63,10 @@ function resetError(){
 }
 
 
-//Función que cambia el valor de los inputs:
+//Función que actualiza el valor de las variables al cambiar el de los inputs:
 
 function handleChangeInput(ev) {
-console.log (ev)
+
  const px = ev.target.dataset.sizing || '';
  const element = ev.target;
  const property = ev.target.name;
@@ -68,9 +76,9 @@ element.style.getPropertyValue(`--${property}`)
 }
 
   return (
-    <div className='App'>
+    <div className='App' data-theme = {theme}>
     <h1 className='title'>Marvel</h1>
-    <Switch/>
+    <Switch switchTheme={switchTheme} theme={theme}/>
     <RangeToChangeFontSize handleChangeInput={handleChangeInput}/>
     <InputColor handleChangeInput={handleChangeInput}/>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>

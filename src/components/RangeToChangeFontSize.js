@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 
 const RangeToChangeFontSize = (props) => {
-    const [size, setSize] = useState('14');
+    const [size, setSize] = useState('20');
     function handleChangeSize(ev){
         setSize(ev.target.value)
         props.handleChangeInput(ev);

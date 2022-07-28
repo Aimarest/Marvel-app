@@ -2,29 +2,46 @@
 
 :root{
   
---light-color: rgb(25, 179, 206);
---dark-mode: rgb(66, 4, 66);
+--background: rgb(25, 179, 206);
+--text-primary: #000;
+--text-secondary:#8e05c2;
+--acent:#8e05c2;
+--border: #333;
 --darkSwitch: grey;
 --fontSize:20px;
 --color:rgb(28, 54, 204);
 --inputSize:70px;
 --inputMargin:2rem;
+--card-bg:#fff;
 }
 
-
-
+[data-theme = 'dark'] {
+--background:#000;
+--text-primary: #fff;
+--text-secondary:#8e05c2;
+--acent:#8e05c2;
+--border: #808080;
+--card-bg:#191919;
+}
+.App{
+  background-color: var(--background) ;
+  color: var(--text-primary);
+  height: 100vh;
+}
 .title{
-  font-size: var(--fontSize) ;
+  font-size: 40px; ;
   color:var(--color);
 }
 .inputFontSize__label{
   
-  font-size:var(--fontSize);
+  font-size:20px;
+  color:var(var(--text-primary))
 }
 .inputFontSize__range{
   cursor:pointer;
   width: var(--inputSize);
   margin-left:var(--inputMargin);
+  color:var(var(--text-primary))
 }
 
 .heroe__title{
@@ -33,7 +50,7 @@
 }
 
 .inputFontColor__label{
-    font-size:var(--fontSize) ;
+    font-size:20px ;
   }
   .inputFontColor__palette{
     width:var(--inputSize);
@@ -41,7 +58,10 @@
     margin-left:var(--inputMargin);
   }
 
-
+.switchComponent{
+  display:flex;
+  
+}
 .react-switch-checkbox {
     height: 0;
     width: 0;
@@ -76,7 +96,7 @@
   
   .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
     left: calc(100% - 2px);
-    transform: translateX(-100%);
+   transform: translateX(-100%);
   }
   
   .react-switch-label:active .react-switch-button {
