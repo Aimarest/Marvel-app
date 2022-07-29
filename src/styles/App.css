@@ -43,11 +43,19 @@ ul{
 .title{
   font-size:var(--fontSize) ;
   color:var(--color);
+  text-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
+  0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
+  0 0 8px rgba(38, 104, 127, 1), 0 0 16px rgba(38, 104, 127, 1),
+  0 0 32px rgba(38, 104, 127, 1);
 }
 
 .subtitle{
   color:var(--color);
   font-size:var(--fontSize) ;
+  text-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
+  0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
+  0 0 8px rgba(38, 104, 127, 1), 0 0 16px rgba(38, 104, 127, 1),
+  0 0 32px rgba(38, 104, 127, 1);
 }
 
 /*Estilos de los inputs*/
@@ -63,6 +71,7 @@ ul{
   width: var(--inputSize);
   margin-left:var(--inputMargin);
   color:var(var(--text-primary))
+  
 }
 
 
@@ -139,7 +148,7 @@ ul{
     display: grid; 
     grid-template-columns: 1fr  ; 
     grid-template-rows: auto ; 
-    gap: 5px 5px; 
+    gap: 20px 5px; 
   }
   .card{
     width:200px;
@@ -149,8 +158,13 @@ ul{
     align-items: center;
     flex-direction: column;
     border: var(--color) solid 1px;
-    padding: 20px;
+    border-radius: 50%;
+    padding: 30px;
     text-align: center;
+    box-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
+      0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
+      0 0 8px rgba(38, 104, 127, 1), 0 0 16px rgba(38, 104, 127, 1),
+      0 0 32px rgba(38, 104, 127, 1);
   }
   .description{
     width:auto;
@@ -160,10 +174,16 @@ ul{
   .image{
     width:auto;
     height:40%;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
+    0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
+    0 0 8px rgba(38, 104, 127, 1), 0 0 16px rgba(38, 104, 127, 1),
+    0 0 32px rgba(38, 104, 127, 1);
   }
   .heroe_title{
-    font-size: 16px;
+    font-size: 20px;
     color:var(--color);
+    max-width: 120px;
   }
 
  
