@@ -9,7 +9,7 @@
 --acent:#8e05c2;
 --border: #333;
 --darkSwitch: grey;
---fontSize:24px;
+--fontSize:32px;
 --color:rgb(73, 75, 202);
 --inputSize:50px;
 --inputMargin:2rem;
@@ -132,8 +132,31 @@ ul{
   .react-switch-label:active .react-switch-button {
     width: 60px;
   }
+.filterName{
+  margin-bottom:40px;
+ 
 
+}
+.filterName__button{
+   border-radius:20px;
+   background-color: var(--color);
+   color:white;
+   font-weight: 600;
+   padding:10px
+}
+.filterName__input{
+  border:none;
+  border-bottom:2px   solid var(--color);
+  background-color: var(--background) ;
+  margin:0  20px 10px 0 ;
+  font-weight: 600;
+  color:var(--color);
+}
 
+.error{
+  font-size: 14px;
+  margin-bottom: 40px;
+}
 
   /*Estilos de las listas*/
 
@@ -151,6 +174,7 @@ ul{
     gap: 20px 5px; 
   }
   .card{
+    background-color: var(--card-bg);
     width:200px;
     height:300px;
     display:flex;
@@ -159,7 +183,7 @@ ul{
     flex-direction: column;
     border: var(--color) solid 1px;
     border-radius: 50%;
-    padding: 30px;
+    padding: 60px;
     text-align: center;
     box-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
       0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
@@ -169,7 +193,9 @@ ul{
   .description{
     width:auto;
     height: auto;
-    font-size:12px;
+    font-size:14px;
+
+    
   }
   .image{
     width:auto;

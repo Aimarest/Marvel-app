@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-function FilterName(props) {
+function FilterSeriesName(props) {
 
     const [inputName, setInputName] = useState('');
     function handleInput(ev) {
         setInputName(ev.target.value);
-        props.resetError();
+        props.resetErrorSeries();
     }
     function handleSearch() {
-        props.filterByName(inputName);
+        props.filterSeriesByName(inputName);
     }
 
     return (
@@ -29,4 +29,4 @@ function FilterName(props) {
 
 }
 
-export default FilterName;
+export default FilterSeriesName;

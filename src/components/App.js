@@ -10,6 +10,7 @@ import FilterName from './FilterNameHeroes';
 import Switch from './Switch';
 import RangeToChangeFontSize from "./RangeToChangeFontSize";
 import InputColor from './InputColor';
+import FilterSeriesName from './FilterSeriesName';
 function App() {
 //Variables de estado:
 const [heroesList, setHeroesList] = useState( ls.get("heroes", []));
@@ -17,7 +18,8 @@ const [errorEmptyFilterName, setErrorEmptyFilterName] = useState('');
 const [errorNoHeroes, setErrorNoHeroes] = useState('');
 const [theme, setTheme] = useState('light');
 const [seriesList,setSeriesList] = useState(ls.get("series",[]));
-
+const [errorSeriesName,setErrorSeriesName] = useState('');
+const [errorEmptySeriesName, setErrorEmptySeriesName] = useState('');
 //UseEffect para realizar el fetch de la lista de héroes al cargar la página:
 
   useEffect(() => {
@@ -59,14 +61,32 @@ useEffect(() => {
       const heroesFiltered = heroesList.filter(heroe => heroe.name.toLowerCase().includes(props.toLowerCase()));
       setHeroesList(heroesFiltered)
       if (heroesFiltered.length === 0) {
-        setErrorNoHeroes('No hay héroes con ese nombre en nuestra lista')
+        setErrorNoHeroes('There are no heroes with that name on our list')
       }
 
     } else {
-      return setErrorEmptyFilterName('Debes ingresar un nombre para filtrar la lista de héroes')
+      return setErrorEmptyFilterName('You must enter a name to filter the list of heroes')
     }
 
 }
+
+//Función que filtra la lista de series por nombre:
+function filterSeriesByName(props) {
+  setErrorSeriesName('');
+  setErrorEmptySeriesName('');
+  if (props.length !== 0) {
+    const seriesFiltered = seriesList.filter(serie => serie.title.toLowerCase().includes(props.toLowerCase()));
+    setSeriesList(seriesFiltered)
+    if (seriesFiltered.length === 0) {
+      setErrorSeriesName('There are no series with that name on our list')
+    }
+
+  } else {
+    return setErrorEmptySeriesName('You must enter a name to filter the list of series')
+  }
+
+}
+
 
 //Función que limpia los errores cuando cambia el valor del input de nombre:
 
@@ -76,6 +96,12 @@ function resetError(){
   setHeroesList(ls.get('heroes'))
 }
 
+//Función que limpia los errores cuando cambia el valor del input de filtrado de series:
+function resetErrorSeries(){
+  setErrorEmptySeriesName('');
+  setErrorSeriesName('');
+  setSeriesList(ls.get('series'))
+}
 
 //Función que actualiza el valor de las variables al cambiar el de los inputs:
 
@@ -98,11 +124,16 @@ element.style.getPropertyValue(`--${property}`)
       <section className='lists'>
       <h2 className='subtitle'> Heroes</h2>
       <FilterName filterByName={filterByName} resetError={resetError} />
-      {errorEmptyFilterName}
+      <p className='error'>{errorEmptyFilterName}</p> 
+      <p className='error'>{errorNoHeroes}</p> 
       <HeroesList list={heroesList} />
-      {errorNoHeroes}
+    
       <h2 className='subtitle'> Series</h2>
+      <FilterSeriesName filterSeriesByName={filterSeriesByName} resetErrorSeries={resetErrorSeries}/>
+      <p className='error'>{errorSeriesName}</p>
+      <p className='error'>{errorEmptySeriesName}</p>
       <SeriesList list={seriesList} />
+     
       </section>
     </div>
   )
