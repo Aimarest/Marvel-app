@@ -13,7 +13,7 @@ const HeroesList = (props) => {
     return (
         <div>
             <section className="heroes">
-                <ul>
+                <ul className='heroe__list'>
                     {heroes}
                 </ul>
 

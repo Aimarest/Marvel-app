@@ -3,7 +3,7 @@ import React from 'react';
 const HeroeItem = (props) => {
     
     return (
-        <div className="mdc-card">
+        <div className="heroe__card">
     
             <h2 className='heroe__title'>{props.heroe.name}</h2>
             <p className='heroe__description'>{props.heroe.description}</p>

@@ -8,8 +8,8 @@
 --acent:#8e05c2;
 --border: #333;
 --darkSwitch: grey;
---fontSize:20px;
---color:rgb(28, 54, 204);
+--fontSize:40px;
+--color:black;
 --inputSize:70px;
 --inputMargin:2rem;
 --card-bg:#fff;
@@ -23,13 +23,20 @@
 --border: #808080;
 --card-bg:#191919;
 }
-.App{
-  background-color: var(--background) ;
+
+.App {
+  background-color: var(--background);
   color: var(--text-primary);
-  height: 100vh;
+  box-sizing: border-box;
+  text-decoration: none;
+
+
+}
+ul{
+  list-style-type: none;
 }
 .title{
-  font-size: 40px; ;
+  font-size:var(--fontSize) ;
   color:var(--color);
 }
 .inputFontSize__label{
@@ -43,9 +50,30 @@
   margin-left:var(--inputMargin);
   color:var(var(--text-primary))
 }
-
+.heroe__list{
+  height: 90vh;
+  display:flex;
+flex-wrap: wrap;
+}
+.heroe__card{
+  width:300px;
+  height:300px;
+  border:1px solid red;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heroe__description{
+  width:auto;
+  height: auto;
+}
+.heroe__image{
+  width:auto;
+  height:50%;
+}
 .heroe__title{
-  font-size: var(--fontSize);
+  font-size: 14px;
   color:var(--color);
 }
 

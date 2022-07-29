@@ -2,7 +2,9 @@
 import '../styles/App.css';
 import React  , { useState, useEffect } from "react";
 import getHeroes from '../services/HeroesApi';
+import getSeries from '../services/SeriesApi';
 import HeroesList from './HeroesList';
+import SeriesList from './SeriesList';
 import ls from '../services/ls';
 import FilterName from './FilterName';
 import Switch from './Switch';
@@ -10,23 +12,35 @@ import RangeToChangeFontSize from "./RangeToChangeFontSize";
 import InputColor from './InputColor';
 function App() {
 //Variables de estado:
-const [list, setList] = useState( ls.get("heroes", []));
+const [heroesList, setHeroesList] = useState( ls.get("heroes", []));
 const [errorEmptyFilterName, setErrorEmptyFilterName] = useState('');
 const [errorNoHeroes, setErrorNoHeroes] = useState('');
 const [theme, setTheme] = useState('light');
+const [seriesList,setSeriesList] = useState(ls.get("series",[]));
 
-//UseEffect para realizar el fetch al cargar la página:
+//UseEffect para realizar el fetch de la lista de héroes al cargar la página:
 
   useEffect(() => {
-    if (list.length === 0) {
+    if (heroesList.length === 0) {
       getHeroes().then((data) => {
-        setList(data);
+        setHeroesList(data);
         ls.set("heroes", data);
       })
 
     }
   }, []); 
 
+//UseEffect para realizar el fetch de la lista de series al cargar la página:
+
+useEffect(() => {
+  if (seriesList.length === 0) {
+    getSeries().then((data) => {
+      setSeriesList(data);
+      ls.set("series", data);
+    })
+
+  }
+}, []); 
 
 
   //Función que cambia el tema de la app:
@@ -42,8 +56,8 @@ const [theme, setTheme] = useState('light');
     setErrorEmptyFilterName('');
     setErrorNoHeroes('');
     if (props.length !== 0) {
-      const heroesFiltered = list.filter(heroe => heroe.name.toLowerCase().includes(props.toLowerCase()));
-      setList(heroesFiltered)
+      const heroesFiltered = heroesList.filter(heroe => heroe.name.toLowerCase().includes(props.toLowerCase()));
+      setHeroesList(heroesFiltered)
       if (heroesFiltered.length === 0) {
         setErrorNoHeroes('No hay héroes con ese nombre en nuestra lista')
       }
@@ -59,7 +73,7 @@ const [theme, setTheme] = useState('light');
 function resetError(){
   setErrorEmptyFilterName('');
   setErrorNoHeroes('');
-  setList(ls.get('heroes'))
+  setHeroesList(ls.get('heroes'))
 }
 
 
@@ -83,8 +97,9 @@ element.style.getPropertyValue(`--${property}`)
     <InputColor handleChangeInput={handleChangeInput}/>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>
     {errorEmptyFilterName}
-  <HeroesList list = {list}/>
+  <HeroesList list = {heroesList}/>
   {errorNoHeroes}
+  <SeriesList list = {seriesList}/>
   </div>
   )
 }
