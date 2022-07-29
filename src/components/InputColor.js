@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 
 const InputColor = (props) => {
-const [colorValue, setColorValue] = useState('black');
+const [colorValue, setColorValue] = useState('');
 
 function handleChangeColor(ev){
     setColorValue(ev.target.value);

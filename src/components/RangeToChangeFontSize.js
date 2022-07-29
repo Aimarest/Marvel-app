@@ -9,7 +9,7 @@ const RangeToChangeFontSize = (props) => {
     }
     return (
         <div className='inputFontSize'>
-        <label className="inputFontSize__label" htmlFor='rangeFontSize'>Change title font-size</label>
+        <label className="inputFontSize__label" htmlFor='rangeFontSize'>Change titles font-size</label>
             <input id="rangeFontSize" data-sizing="px" value={size} name="fontSize" type="range" className='inputFontSize__range' onChange={handleChangeSize}></input>
         </div>
     );

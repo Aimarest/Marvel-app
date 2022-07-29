@@ -6,7 +6,7 @@ import getSeries from '../services/SeriesApi';
 import HeroesList from './HeroesList';
 import SeriesList from './SeriesList';
 import ls from '../services/ls';
-import FilterName from './FilterName';
+import FilterName from './FilterNameHeroes';
 import Switch from './Switch';
 import RangeToChangeFontSize from "./RangeToChangeFontSize";
 import InputColor from './InputColor';
@@ -50,7 +50,7 @@ useEffect(() => {
     setTheme(newTheme);
   }
 
-// Función que filtra por nombre:
+// Función que filtra por nombre del héroe:
 
   function filterByName(props) {
     setErrorEmptyFilterName('');
@@ -96,12 +96,12 @@ element.style.getPropertyValue(`--${property}`)
       <RangeToChangeFontSize handleChangeInput={handleChangeInput} />
       <InputColor handleChangeInput={handleChangeInput} />
       <section className='lists'>
-      <h2 className='firstSubtitle'> Heroes</h2>
+      <h2 className='subtitle'> Heroes</h2>
       <FilterName filterByName={filterByName} resetError={resetError} />
       {errorEmptyFilterName}
       <HeroesList list={heroesList} />
       {errorNoHeroes}
-      <h2 className='secondtSubtitle'> Series</h2>
+      <h2 className='subtitle'> Series</h2>
       <SeriesList list={seriesList} />
       </section>
     </div>

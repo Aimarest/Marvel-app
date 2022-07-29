@@ -7,7 +7,7 @@ const SeriesList = (props) => {
     }).map((serie)=>{
        
         return ( 
-            <li key={serie.id} className={`serie__card`}>
+            <li key={serie.id} className={`card`}>
               <SerieItem serie={serie} />  
             </li>
         ) 
@@ -16,7 +16,7 @@ const SeriesList = (props) => {
     return (
         
             <section className="series">
-                <ul className='series__list'>
+                <ul className='list'>
                     {series}
                 </ul>
 

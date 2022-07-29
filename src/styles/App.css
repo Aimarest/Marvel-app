@@ -9,9 +9,9 @@
 --acent:#8e05c2;
 --border: #333;
 --darkSwitch: grey;
---fontSize:40px;
---color:black;
---inputSize:70px;
+--fontSize:24px;
+--color:rgb(73, 75, 202);
+--inputSize:50px;
 --inputMargin:2rem;
 --card-bg:#fff;
 }
@@ -27,30 +27,35 @@
 
 .App {
   background-color: var(--background);
-  color: var(--text-primary);
-  box-sizing: border-box;
-  text-decoration: none;
-display:flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
+    color: var(--text-primary);
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 ul{
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
 .title{
   font-size:var(--fontSize) ;
   color:var(--color);
 }
 
+.subtitle{
+  color:var(--color);
+  font-size:var(--fontSize) ;
+}
 
 /*Estilos de los inputs*/
 
 
 .inputFontSize__label{
   
-  font-size:20px;
+  font-size:14px;
   color:var(var(--text-primary))
 }
 .inputFontSize__range{
@@ -62,7 +67,7 @@ ul{
 
 
 .inputFontColor__label{
-    font-size:20px ;
+    font-size:14px ;
   }
   .inputFontColor__palette{
     width:var(--inputSize);
@@ -122,6 +127,7 @@ ul{
 
 
   /*Estilos de las listas*/
+
  .lists{
   display:flex;
   flex-direction: column;
@@ -129,33 +135,42 @@ ul{
   justify-content: center;
  }
   .heroe__list{
-    display:flex;
-  flex-wrap: wrap;
+    display: grid; 
+    display: grid; 
+    grid-template-columns: 1fr  ; 
+    grid-template-rows: auto ; 
+    gap: 5px 5px; 
   }
   .heroe__card{
-    width:300px;
+    width:200px;
     height:300px;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: var(--color) solid 1px;
+    padding: 30px;
+    text-align: center;
   }
   .heroe__description{
     width:auto;
     height: auto;
+    font-size:12px;
   }
   .heroe__image{
     width:auto;
-    height:50%;
+    height:40%;
   }
   .heroe__title{
-    font-size: 14px;
+    font-size: 16px;
     color:var(--color);
   }
 
   .series__list{
-    display:flex;
-  flex-wrap: wrap;
+    display: grid; 
+    grid-template-columns: 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr ; 
+    gap: 5px 5px; 
   
   }
   .serie__card{
@@ -165,6 +180,7 @@ ul{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: var(--color) solid 1px;
   }
  
   .serie__image{
