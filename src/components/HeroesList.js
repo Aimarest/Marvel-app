@@ -8,7 +8,7 @@ const HeroesList = (props) => {
     .map((heroe)=>{
      
         return (
-            <li key={heroe.id} className="heroe__card">
+            <li key={heroe.id} className="card">
               <HeroeItem heroe={heroe} />  
             </li>
         ) 
@@ -16,7 +16,7 @@ const HeroesList = (props) => {
     return (
         
             <section className="heroes">
-                <ul className='heroe__list'>
+                <ul className='list'>
                     {heroes}
                 </ul>
 

@@ -134,14 +134,14 @@ ul{
   align-items: center;
   justify-content: center;
  }
-  .heroe__list{
+  .list{
     display: grid; 
     display: grid; 
     grid-template-columns: 1fr  ; 
     grid-template-rows: auto ; 
     gap: 5px 5px; 
   }
-  .heroe__card{
+  .card{
     width:200px;
     height:300px;
     display:flex;
@@ -149,45 +149,26 @@ ul{
     align-items: center;
     flex-direction: column;
     border: var(--color) solid 1px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
   }
-  .heroe__description{
+  .description{
     width:auto;
     height: auto;
     font-size:12px;
   }
-  .heroe__image{
+  .image{
     width:auto;
     height:40%;
   }
-  .heroe__title{
+  .heroe_title{
     font-size: 16px;
     color:var(--color);
   }
 
-  .series__list{
-    display: grid; 
-    grid-template-columns: 1fr 1fr ; 
-    grid-template-rows: 1fr 1fr ; 
-    gap: 5px 5px; 
-  
-  }
-  .serie__card{
-    width:300px;
-    height:300px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: var(--color) solid 1px;
-  }
  
-  .serie__image{
-    width:auto;
-    height:50%;
-  }
-  .serie__title{
-    font-size: 14px;
+
+  .serie_title{
+    font-size: 16px;
     color:var(--color);
   }

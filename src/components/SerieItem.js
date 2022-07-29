@@ -4,10 +4,10 @@ const SerieItem = (props) => {
 
     
     return (
-        <div className="serie__card ">
+        <div className="card ">
     
-            <h2 className='serie__title'>{props.serie.title}</h2>
-            <img className='serie__image' src={props.serie.image} alt={`Imagen de ${props.serie.title}`} title={`Imagen de ${props.serie.title}`} />
+            <h2 className='serie_title'>{props.serie.title}</h2>
+            <img className='image' src={props.serie.image} alt={`Imagen de ${props.serie.title}`} title={`Imagen de ${props.serie.title}`} />
         </div>
     );
 }
