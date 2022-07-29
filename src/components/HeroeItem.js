@@ -3,11 +3,10 @@ import React from 'react';
 const HeroeItem = (props) => {
  function errorDescription (){
     if(props.heroe.description === ""){
- return <p>'Descripción del personaje no disponible' </p>
+ return <p>'Character description not available' </p>
      }
  }   
     
-  
     return (    
    
         <div className="heroe__card">

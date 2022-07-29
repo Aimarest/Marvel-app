@@ -96,7 +96,7 @@ element.style.getPropertyValue(`--${property}`)
       <RangeToChangeFontSize handleChangeInput={handleChangeInput} />
       <InputColor handleChangeInput={handleChangeInput} />
       <section className='lists'>
-      <h2 className='firstSubtitle'> Héroes</h2>
+      <h2 className='firstSubtitle'> Heroes</h2>
       <FilterName filterByName={filterByName} resetError={resetError} />
       {errorEmptyFilterName}
       <HeroesList list={heroesList} />

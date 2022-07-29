@@ -11,7 +11,7 @@ function handleChangeColor(ev){
     return (
         <div>
              <div className='inputFontColor'>
-        <label className="inputFontColor__label" htmlFor='inputFontColor'>Cambia el color de fuente</label>
+        <label className="inputFontColor__label" htmlFor='inputFontColor'>Change font color</label>
             <input id="inputFontColor" name='color' value={colorValue} onChange={handleChangeColor} type="color" className='inputFontColor__palette'></input>
         </div>
         </div>
