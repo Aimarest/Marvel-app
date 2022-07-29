@@ -7,7 +7,7 @@ const Switch = (props) => {
   return (
     <div className="switchComponent">
  
-      <i class="fa-solid fa-sun"></i>
+      <i className="fa-solid fa-sun"></i>
       <input
         className="react-switch-checkbox"
         id={`react-switch-new`}

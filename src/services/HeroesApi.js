@@ -13,6 +13,7 @@ function getHeroes() {
         .then((response) => {
             const dataClean = response.data.results.map((heroe) => {
                 return {
+                    
                     id: heroe.id,
                     name: heroe.name,
                     description: heroe.description,
