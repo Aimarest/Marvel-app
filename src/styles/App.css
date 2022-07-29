@@ -1,4 +1,5 @@
 
+/*Estilos generales*/
 
 :root{
   
@@ -29,7 +30,10 @@
   color: var(--text-primary);
   box-sizing: border-box;
   text-decoration: none;
-
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
 }
 ul{
@@ -39,6 +43,11 @@ ul{
   font-size:var(--fontSize) ;
   color:var(--color);
 }
+
+
+/*Estilos de los inputs*/
+
+
 .inputFontSize__label{
   
   font-size:20px;
@@ -50,32 +59,7 @@ ul{
   margin-left:var(--inputMargin);
   color:var(var(--text-primary))
 }
-.heroe__list{
-  height: 90vh;
-  display:flex;
-flex-wrap: wrap;
-}
-.heroe__card{
-  width:300px;
-  height:300px;
-  border:1px solid red;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.heroe__description{
-  width:auto;
-  height: auto;
-}
-.heroe__image{
-  width:auto;
-  height:50%;
-}
-.heroe__title{
-  font-size: 14px;
-  color:var(--color);
-}
+
 
 .inputFontColor__label{
     font-size:20px ;
@@ -133,4 +117,59 @@ flex-wrap: wrap;
   
   .react-switch-label:active .react-switch-button {
     width: 60px;
+  }
+
+
+
+  /*Estilos de las listas*/
+
+  .heroe__list{
+    height: 90vh;
+    display:flex;
+  flex-wrap: wrap;
+  }
+  .heroe__card{
+    width:300px;
+    height:300px;
+    border:1px solid red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .heroe__description{
+    width:auto;
+    height: auto;
+  }
+  .heroe__image{
+    width:auto;
+    height:50%;
+  }
+  .heroe__title{
+    font-size: 14px;
+    color:var(--color);
+  }
+
+  .serie__list{
+    height: 90vh;
+    display:flex;
+  flex-wrap: wrap;
+  }
+  .serie__card{
+    width:300px;
+    height:300px;
+    border:1px solid red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+ 
+  .serie__image{
+    width:auto;
+    height:50%;
+  }
+  .serie__title{
+    font-size: 14px;
+    color:var(--color);
   }

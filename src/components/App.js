@@ -95,10 +95,12 @@ element.style.getPropertyValue(`--${property}`)
     <Switch switchTheme={switchTheme} theme={theme}/>
     <RangeToChangeFontSize handleChangeInput={handleChangeInput}/>
     <InputColor handleChangeInput={handleChangeInput}/>
+    <h2 className='firstSubtitle'> Héroes</h2>
     <FilterName  filterByName = {filterByName} resetError={resetError}/>
     {errorEmptyFilterName}
   <HeroesList list = {heroesList}/>
   {errorNoHeroes}
+  <h2 className='secondtSubtitle'> Series</h2>
   <SeriesList list = {seriesList}/>
   </div>
   )
