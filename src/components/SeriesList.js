@@ -13,7 +13,6 @@ const SeriesList = (props) => {
         ) 
     })
 
-    console.log(series)
     return (
         
             <section className="series">
