@@ -11,14 +11,14 @@ const HeroesList = (props) => {
         ) 
     })  
     return (
-        <div>
+        
             <section className="heroes">
                 <ul className='heroe__list'>
                     {heroes}
                 </ul>
 
             </section>
-        </div>
+       
     );
 }
 

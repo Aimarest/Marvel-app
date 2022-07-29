@@ -11,14 +11,14 @@ const SeriesList = (props) => {
         ) 
     })  
     return (
-        <div>
+        
             <section className="series">
                 <ul className='series__list'>
                     {series}
                 </ul>
 
             </section>
-        </div>
+    
     );
 }
 

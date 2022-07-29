@@ -12,7 +12,7 @@ const [inputName, setInputName] = useState('');
     }
 
     return (
-        <div>
+        <div className='filterName'>
 <label className="mdc-text-field mdc-text-field--filled mdc-text-field--no-label">
   <span className="mdc-text-field__ripple"></span>
   <input onChange={handleInput} value = {inputName} className="mdc-text-field__input" type="text" placeholder="Escribe el nombre" aria-label="Label"/>

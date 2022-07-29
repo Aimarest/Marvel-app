@@ -90,19 +90,21 @@ element.style.getPropertyValue(`--${property}`)
 }
 
   return (
-    <div className='App' data-theme = {theme}>
-    <h1 className='title'>Marvel</h1>
-    <Switch switchTheme={switchTheme} theme={theme}/>
-    <RangeToChangeFontSize handleChangeInput={handleChangeInput}/>
-    <InputColor handleChangeInput={handleChangeInput}/>
-    <h2 className='firstSubtitle'> Héroes</h2>
-    <FilterName  filterByName = {filterByName} resetError={resetError}/>
-    {errorEmptyFilterName}
-  <HeroesList list = {heroesList}/>
-  {errorNoHeroes}
-  <h2 className='secondtSubtitle'> Series</h2>
-  <SeriesList list = {seriesList}/>
-  </div>
+    <div className='App' data-theme={theme}>
+      <h1 className='title'>Marvel</h1>
+      <Switch switchTheme={switchTheme} theme={theme} />
+      <RangeToChangeFontSize handleChangeInput={handleChangeInput} />
+      <InputColor handleChangeInput={handleChangeInput} />
+      <section className='lists'>
+      <h2 className='firstSubtitle'> Héroes</h2>
+      <FilterName filterByName={filterByName} resetError={resetError} />
+      {errorEmptyFilterName}
+      <HeroesList list={heroesList} />
+      {errorNoHeroes}
+      <h2 className='secondtSubtitle'> Series</h2>
+      <SeriesList list={seriesList} />
+      </section>
+    </div>
   )
 }
 export default App;
