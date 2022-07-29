@@ -172,6 +172,7 @@ ul{
     grid-template-columns: 1fr  ; 
     grid-template-rows: auto ; 
     gap: 20px 5px; 
+ 
   }
   .card{
     background-color: var(--card-bg);
@@ -218,3 +219,33 @@ ul{
     font-size: 16px;
     color:var(--color);
   }
+@media (min-width: 764px) {
+  .inputFontSize__label{
+font-size: 20px;
+  }
+  .inputFontColor__label{
+    font-size: 20px;
+  
+  }
+  .filterName__input{
+    font-size: 20px;
+  }
+  .filterName__button{
+    font-size: 20px;
+  }
+  .error{
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .card{
+    padding:70px
+  }
+  .description{
+    font-size: 16px;
+  }
+  .list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px 25px;
+  }
+}
