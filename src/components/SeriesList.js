@@ -7,7 +7,7 @@ const SeriesList = (props) => {
     }).map((serie)=>{
        
         return ( 
-            <li key={serie.id} className={`card`}>
+            <li key={serie.id} >
               <SerieItem serie={serie} />  
             </li>
         ) 
